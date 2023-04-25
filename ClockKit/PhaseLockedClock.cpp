@@ -4,7 +4,6 @@
 #include <mutex>
 #include <random>
 #include <thread>
-
 #ifdef DEBUG
 // The extra output from these cout<<'s breaks "make test".
 using std::cout;
@@ -43,8 +42,18 @@ tp PhaseLockedClock::getValue()
 {
     if (!inSync_)
         return tpInvalid;
-    Guard guard(mutexPLC);
-    return variableFrequencyClock_.getValue();
+    {
+        // Try to get the mutex for the value of the clock
+        // If now, return an invalid timestamp to signal that a good value could not be acquired
+        std::unique_lock<std::mutex> value_lock(mutexPLC, std::try_to_lock);
+        if (!value_lock.owns_lock()) {
+            #ifdef DEBUG
+            cout << "Tried to getValue() but lock could not be acquired" << endl;
+            #endif
+            return tpInvalid;
+        }
+        return variableFrequencyClock_.getValue();
+    }
 }
 
 dur PhaseLockedClock::getOffset()
