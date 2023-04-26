@@ -1,11 +1,11 @@
-#include "clockkit.h"
+#include "ClockKit/clockkit.h"
 
 #include <atomic>
 #include <limits>
 #include <thread>
 
-#include "ClockClient.h"
-#include "ConfigReader.h"
+#include "ClockKit/ClockClient.h"
+#include "ClockKit/ConfigReader.h"
 
 using namespace dex;
 

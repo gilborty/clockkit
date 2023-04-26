@@ -1,9 +1,9 @@
 #include <cstdlib>
 
-#include "ClockServer.h"
-#include "SystemClock.h"
+#include "ClockKit/ClockServer.h"
+#include "ClockKit/SystemClock.h"
 #ifdef DEBUG
-#include "VariableFrequencyClock.h"
+#include "ClockKit/VariableFrequencyClock.h"
 #endif
 
 int main(int argc, char* argv[])

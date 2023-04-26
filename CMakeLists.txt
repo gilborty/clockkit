@@ -3,7 +3,7 @@ project(ClockKit)
 
 # Compiler flags
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -fPIC -Wall -Werror -Weffc++ -pedantic")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -fPIC -Wall -Werror -Wextra -Weffc++ -Wpedantic")
 
 # Find dependencies
 find_package(PkgConfig)
@@ -33,7 +33,7 @@ set(CLOCKKIT_ALL_SOURCES ${CLOCKKIT_SOURCES} ${CLOCKKIT_EXE_SOURCES})
 add_library(clockkit STATIC ${CLOCKKIT_SOURCES})
 target_include_directories(clockkit
 PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_BURRENT_SOURCE_DIR}>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/ClockKit/include>
     $<INSTALL_INTERFACE:include>
 )
 
@@ -49,3 +49,17 @@ target_link_libraries(cktest-standalone clockkit)
 
 add_executable(cktest-unit ClockKit/test-unit.cpp)
 target_link_libraries(cktest-unit clockkit)
+
+
+# ==============================================
+# Install
+install(
+  DIRECTORY include/
+  DESTINATION include
+)
+install(
+  TARGETS clockkit
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)

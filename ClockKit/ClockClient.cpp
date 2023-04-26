@@ -1,5 +1,5 @@
-#include "ClockClient.h"
-#include "SystemClock.h"
+#include "ClockKit/ClockClient.h"
+#include "ClockKit/SystemClock.h"
 
 // #define DEBUG
 

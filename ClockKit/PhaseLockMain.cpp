@@ -2,7 +2,7 @@
 #include <limits>
 #include <thread>
 
-#include "ConfigReader.h"
+#include "ClockKit/ConfigReader.h"
 
 using namespace std::chrono;
 using namespace dex;

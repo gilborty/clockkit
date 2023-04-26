@@ -1,8 +1,8 @@
-#include "ClockServer.h"
+#include "ClockKit/ClockServer.h"
 
 #include <cmath>
 
-#include "ClockPacket.h"
+#include "ClockKit/ClockPacket.h"
 
 using namespace std;
 using namespace std::chrono;

@@ -5,10 +5,10 @@
 #include <thread>
 #include <vector>
 
-#include "ClockClient.h"
-#include "ClockServer.h"
-#include "PhaseLockedClock.h"
-#include "SystemClock.h"
+#include "ClockKit/ClockClient.h"
+#include "ClockKit/ClockServer.h"
+#include "ClockKit/PhaseLockedClock.h"
+#include "ClockKit/SystemClock.h"
 
 using namespace dex;
 using namespace std::chrono;

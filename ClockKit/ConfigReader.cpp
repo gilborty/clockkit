@@ -1,8 +1,8 @@
-#include "ConfigReader.h"
+#include "ClockKit/ConfigReader.h"
 
 #include <fstream>
 
-#include "SystemClock.h"
+#include "ClockKit/SystemClock.h"
 
 namespace dex {
 

@@ -1,6 +1,7 @@
 // clockkit got this from
 // https://raw.githubusercontent.com/Ybalrid/kissnet/master/kissnet.hpp
 // and added a few corrections.
+// 2023-04-26: Further improvements to fix errors with -Wextra
 
 /*
  * MIT License

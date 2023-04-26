@@ -12,3 +12,6 @@ ClockKit/python/clockkit.py
 ClockKit/*/wrap.cpp
 ClockKit/*/wrap.o
 ClockKit/*/*.so
+
+build/*
+.vscode/*

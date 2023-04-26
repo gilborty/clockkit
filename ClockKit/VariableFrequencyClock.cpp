@@ -1,4 +1,4 @@
-#include "VariableFrequencyClock.h"
+#include "ClockKit/VariableFrequencyClock.h"
 
 namespace dex {
 

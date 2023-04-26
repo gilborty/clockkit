@@ -3,9 +3,9 @@
 #include <thread>
 #include <vector>
 
-#include "PhaseLockedClock.h"
-#include "SystemClock.h"
-#include "VariableFrequencyClock.h"
+#include "clockkit/PhaseLockedClock.h"
+#include "clockkit/SystemClock.h"
+#include "clockkit/VariableFrequencyClock.h"
 
 using namespace dex;
 using namespace std::chrono;
