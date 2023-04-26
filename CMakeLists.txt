@@ -31,6 +31,11 @@ set(CLOCKKIT_EXE_SOURCES
 # Build the library statically 
 set(CLOCKKIT_ALL_SOURCES ${CLOCKKIT_SOURCES} ${CLOCKKIT_EXE_SOURCES})
 add_library(clockkit STATIC ${CLOCKKIT_SOURCES})
+target_include_directories(clockkit
+PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_BURRENT_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:include>
+)
 
 # Executables
 add_executable(ckserver ClockKit/ClockServerMain.cpp)
