@@ -405,7 +405,7 @@ namespace kissnet
 
 	///Address information structs
 	struct addr_collection {
-	    sockaddr_storage adrinf = {0};
+	    sockaddr_storage adrinf = {};
 	    socklen_t sock_size = 0;
 	};
 

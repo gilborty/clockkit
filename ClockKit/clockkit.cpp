@@ -17,7 +17,7 @@ ClockClient* cli = nullptr;
 std::thread* th_clock = nullptr;
 std::atomic_bool end_clocks(false);  // .load() and .store() are implicit.
 std::string strTime;                 // Static storage for the pointer returned by ckTimeAsString().
-void test_ok(const char* func)
+void test_ok(const char* func __attribute__((unused)))
 {
 // #define DEBUG
 #ifdef DEBUG

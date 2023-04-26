@@ -3,9 +3,9 @@
 #include <thread>
 #include <vector>
 
-#include "clockkit/PhaseLockedClock.h"
-#include "clockkit/SystemClock.h"
-#include "clockkit/VariableFrequencyClock.h"
+#include "ClockKit/PhaseLockedClock.h"
+#include "ClockKit/SystemClock.h"
+#include "ClockKit/VariableFrequencyClock.h"
 
 using namespace dex;
 using namespace std::chrono;
@@ -127,7 +127,7 @@ bool speedyclocks()
     return true;
 }
 
-int main(int argc, char* argv[])
+int main(int, char**)
 {
     if (!clones_vfc())
         return 1;
